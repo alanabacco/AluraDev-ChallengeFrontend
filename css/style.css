@@ -1,0 +1,280 @@
+:root {
+    --dark-blue: #051D3B;
+    --blue-300: #5081FB;
+    --blue-300-2: #5081FB50;
+    --blue-200: #7BA4FC;
+    --blue-100: #96B9FD;
+    --inputs-bgs: #ffffff16;
+}
+
+html {
+    background: var(--dark-blue);
+    font-family: 'Inter', sans-serif;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    margin: 32px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 145px;
+}
+
+input {
+    background: var(--inputs-bgs);
+    border-radius: 8px;
+    color: #ffffff64;
+    display: block;
+    outline: none;
+}
+
+input:hover, #descricao-projeto:hover, #select-ling:hover {
+    background: #ffffff24;
+}
+
+input:focus, #descricao-projeto:focus, #select-ling:focus {
+    background: #ffffff24;
+}
+
+#barra-busca {
+    width: 48vw;
+    height: 48px;
+}
+
+#author, .social-author {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+#author:hover, .social-author:hover {
+    background: #ffffff08;
+    border-radius: 8px;
+}
+
+#foto-perfil {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    margin-right: 8px;
+}
+
+/* MENU */
+#menu {
+    margin-right: 16px;
+}
+
+.link-menu {
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 16px;
+    align-items: center;
+    color: #ffffff56;    
+}
+
+.fa-users, .fa-code {
+    background: var(--blue-300-2);
+    padding: 16px;
+    border-radius: 16px;
+    margin-right: 16px;
+}
+
+.link-active {
+    color: white;
+}
+
+.fas-link-active {
+    background: var(--blue-300);
+}
+
+h2 {
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+/* CONTEUDO */
+main {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.codigo-wrapper {
+    height: 81%;
+    display: flex;
+}
+
+#campo-editor {
+    border: solid #6bd1ff 16px;
+    border-radius: 8px;
+    width: 43vw;
+    height: 56vh;
+    padding: 16px;
+    outline: none;
+}
+
+#btn-highlight {
+    display: block;
+    background: var(--blue-300-2);
+    color: white;
+    height: 48px;
+    width: 48vw;
+    border-radius: 8px;
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+#btn-highlight:hover {
+    background: #5081FB60;
+}
+
+#btn-highlight:active {
+    background: #5081FB60;
+    border: solid #5081fb70 4px;
+}
+
+#btn-highlight:focus {
+    background: #5081FB75;
+}
+
+/* INFOS PROJETO */
+#infos-projeto {
+    margin-left: 16px;;
+}
+
+#nome-projeto {
+    height: 48px;
+    width: 16vw;
+    margin-bottom: 16px;
+}
+
+#descricao-projeto {
+    height: 96px;
+    width: 16vw;
+    margin-bottom: 40px;
+    background: var(--inputs-bgs);
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    outline: none;
+}
+
+#select-ling {
+    background: var(--inputs-bgs);
+    border-radius: 8px;
+    height: 48px;
+    width: 16vw;
+    color: #ffffff64;
+    cursor: pointer;
+}
+
+select option {
+    background-color:#283d57;
+}
+
+#select-color {
+    width: 16vw;
+    height: 48px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.btn-save {
+    background: var(--blue-300);
+    border-radius: 8px;
+    height: 48px;
+    width: 16vw;
+    color: var(--dark-blue);
+    margin-top: 32px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: var(--blue-200);
+}
+
+.btn-save:active {
+    background-color: var(--blue-200);
+    border: solid #5081fb72 4px;
+}
+
+.btn-save:focus {
+    background-color: var(--blue-100);
+}
+
+/* COMUNIDADE */
+#projetos-comunidade {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-projeto {
+    color: white;
+    background: #00000016;
+    margin: 0 10px 20px 10px;
+}
+
+.card-projeto img {
+    max-width: 520px;
+    max-height: 288px;
+}
+
+.descricao-projeto {
+    margin: 24px;
+    padding-bottom: 24px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.social-foto-perfil {
+    width: 24px;
+    height: 24px;
+    border-radius: 50px;
+    margin-right: 8px;
+}
+
+.card-projeto .social {
+    align-items: center;
+    margin: 24px;
+    display: none;
+}
+
+.card-projeto:hover .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 24px;
+}
+
+.fa-comment, .fa-heart {
+    padding: 10px;
+}
+
+/* FOOTER */
+footer p {
+    background: #00000030;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 10px;
+}
+
+footer p a {
+    text-decoration: none;
+    color: white;
+}
