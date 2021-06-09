@@ -17,7 +17,7 @@
 
 O projeto AluraDev foi desenvolvido durante o Challenge Frontend da Alura, que contou com 4 semanas para a criação do projeto, com sprints e layout no figma por 3 semanas, como se fosse um ambiente de trabalho real.
 
-[Acessar o Projeto](https://aluradev-challenge.alanabacco.vercel.app/)
+[Acessar o Projeto](https://aluradev-challengefrontend.vercel.app/)
 
 ---
 
