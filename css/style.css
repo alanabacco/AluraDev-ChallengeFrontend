@@ -45,6 +45,14 @@ input:focus, #descricao-projeto:focus, #select-ling:focus {
     height: 48px;
 }
 
+.fa-search {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 12px;
+}
+
 #author, .social-author {
     color: white;
     display: flex;
@@ -277,4 +285,92 @@ footer p {
 footer p a {
     text-decoration: none;
     color: white;
+}
+
+/* RESPONSIVE */
+.btn-check-responsive {
+    color: white;
+    font-size: 24px;
+    padding: 12px;
+    cursor: pointer;
+    display: none;
+}
+
+#check-responsive {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .btn-check-responsive {
+        display: block;
+    }
+
+    #author {
+        display: none;
+    }
+
+    main {
+        justify-content: space-evenly;
+    }
+
+    #menu {
+        position: fixed;
+        width: 206px;
+        height: 70vh;
+        background: #2D415B;
+        border-radius: 8px;
+        right: -100%;
+        transition: all .5s;
+        padding: 24px;
+    }
+
+    #nome-projeto, #descricao-projeto, #select-ling, #select-color, .btn-save {
+        width: 22vw;
+    }
+
+    #btn-highlight {
+        margin: 32px auto 40px auto;
+    }
+
+    /*#check-responsive:checked ~ .menu-responsive {
+        right: 0;
+    }*/
+}
+
+@media (max-width: 770px) {
+    #barra-busca {
+        display: none;
+    }
+
+    .fa-search {
+        display: block;
+    }
+
+    #menu {
+        margin-top: -515px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    #btn-highlight {
+        margin: 32px auto 40px auto;
+        width: 61vw;
+    }
+
+    #campo-editor {
+        width: 55vw;
+        padding: 8px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #infos-projeto {
+        margin: auto auto 20px auto;
+    }
+
+    #nome-projeto, #descricao-projeto, #select-ling, #select-color, .btn-save {
+        width: 60vw;
+    }
 }

@@ -28,13 +28,18 @@ btnHljs.addEventListener('click', () => {
     hljs.highlightBlock(code);
 })
 
-//icone menu
-// const selectMenu = document.querySelector('.hamburguer');
-// selectMenu.addEventListener('click', function(event) {
-//     const menu = document.querySelector('.header__menu');
-//     menu.classList.toggle('active');
 
-
-//     const menuIcone = event.target;
-//     menuIcone.setAttribute('class', menuIcone.classList.contains('fa-times') ? 'fas fa-bars hamburguer' : 'fas fa-times')
-// })
+//menu-responsive
+let checkResponsive = document.getElementById('check-responsive')
+checkResponsive.addEventListener('click', () => {
+    if(checkResponsive.checked) {
+        console.log('Clicou');
+        let menu = document.getElementById('menu');
+        //menu.classList.add('menu-responsive')
+        menu.style.right = '0';
+    }
+    else {
+        //menu.classList.remove('menu-responsive');
+        menu.style.right = '-100%';
+    }
+})
