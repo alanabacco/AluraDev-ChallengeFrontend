@@ -1,6 +1,6 @@
 //muda cor da borda do editor
-var selectColor = document.querySelector('#select-color');
-var editor = document.getElementById('campo-editor');
+const selectColor = document.querySelector('#select-color');
+const editor = document.getElementById('campo-editor');
 
 selectColor.addEventListener('input', () => {
     color = selectColor.value;
@@ -43,3 +43,61 @@ checkResponsive.addEventListener('click', () => {
         menu.style.right = '-100%';
     }
 })
+
+//local storage
+const btnSave = document.querySelector(".btn-save");
+const titleProject = document.querySelector("#nome-projeto");
+const descriptionProject = document.querySelector("#descricao-projeto");
+
+btnSave.addEventListener('click', () => {
+    if (typeof(Storage) !==  "undefined"){
+        const project = montaProjeto();
+        saveLocalStorage(project);
+        //console.log(project);
+    } else {
+        console.log("Não suporta o localstorage");
+    }
+})
+
+function montaProjeto() {
+    let projeto = {
+        'id': atribuiId(),
+        'detalhesDoProjeto': {
+            'codigo': codeArea.querySelector("code").innerText,
+            'borda': selectColor.value,
+            'nomeDoProjeto': titleProject.value,
+            'descricaoDoProjeto': descriptionProject.value,
+            'linguagem': codeLing.value
+        }
+    }
+    return projeto;
+}
+
+let numeroId = 1;
+
+if (localStorage.lenght > 0) {
+    numeroId = localStorage.length;
+}
+
+function atribuiId() {
+    if (localStorage.length == 0) {
+        return 0;
+    } else {
+        if (localStorage.lenght == numeroId) {
+            let novoId = numeroId;
+            numeroId++;
+            return novoId;
+        }
+    }
+}
+
+/*
+function atribuiId() {
+    return localStorage.lenght;
+}*/
+
+function saveLocalStorage(objectJson) {
+    localStorage.setItem(objectJson.id, JSON.stringify(objectJson));
+}
+
+//limpar localStorage: localStorage.clear();
